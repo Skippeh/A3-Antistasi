@@ -85,7 +85,7 @@ if (!_isPlayer) then {build_engineerSelected doFollow (leader build_engineerSele
 private _veh = createVehicle [_structureType, _positionX, [], 0, "CAN_COLLIDE"];
 _veh setDir _dir;
 
-if ((build_type == "SB") or (build_type == "CB")) exitWith
+if ((build_type == "SB") or (build_type == "CB") or (build_type == "HP_P")) exitWith
 {
 	staticsToSave pushBackUnique _veh;
 	publicVariable "staticsToSave"

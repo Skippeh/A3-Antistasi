@@ -195,6 +195,9 @@ switch (_callbackTarget) do {
 					case "CB": {
 						[!(isOnRoad _pos) && _pos inArea build_nearestFriendlyMarker, "Bunkers can only be built off roads, in friendly areas"];
 					};
+					case "HP_P": {
+						[!(isOnRoad _pos) && _pos inArea build_nearestFriendlyMarker, "Helipads can only be built off roads, in friendly areas"];
+					};
 					default {
 						[true];
 					};
