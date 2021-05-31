@@ -141,11 +141,17 @@ switch build_type do
 		_classX = "Land_PillboxBunker_01_big_F";
 		build_cost = 300;
 		};
+	case "HP_P":
+		{
+		build_time = 60;
+		_classX = "Land_HelipadCircle_F";
+		build_cost = 1000;
+		};
 	};
 
 private _leave = false;
 private _textX = "";
-if ((build_type == "SB") or (build_type == "CB")) then
+if ((build_type == "SB") or (build_type == "CB") or (build_type == "HP_P")) then
 	{
 	if (build_type == "SB") then {_playerDir = _playerDir + 180};
 	_resourcesFIA = if (!isMultiPlayer) then {server getVariable "resourcesFIA"} else {player getVariable "moneyX"};
@@ -161,7 +167,7 @@ if ((build_type == "SB") or (build_type == "CB")) then
 		if (!(_playerPosition inArea build_nearestFriendlyMarker)) then
 			{
 			_leave = true;
-			_textX = "You cannot build a bunker outside a controlled zone";
+			_textX = "You cannot build a bunker or helipad outside a controlled zone";
 			build_nearestFriendlyMarker = nil;
 			};
 		};

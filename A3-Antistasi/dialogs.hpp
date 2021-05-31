@@ -1964,7 +1964,7 @@ class construction_menu 	{
 			x = 0.244979 * safezoneW + safezoneX;
 			y = 0.223941 * safezoneH + safezoneY;
 			w = 0.445038 * safezoneW;
-			h = 0.30 * safezoneH;//30
+			h = 0.40 * safezoneH;//40
 		};
 		class HQ_frame: RscFrame
 		{
@@ -1973,7 +1973,7 @@ class construction_menu 	{
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
-			h = 0.28 * safezoneH;//28
+			h = 0.38 * safezoneH;//38
 		};
 		class HQ_button_back: RscButton
 		{
@@ -2030,6 +2030,28 @@ class construction_menu 	{
 			tooltip = $STR_antistasi_dialogs_construction_menu_bunker_options_tooltip;
 			action = "closeDialog 0;nul = createDialog ""bunker_menu""";
 		};
+		class HQ_button_helipad_terrain: RscButton
+		{
+			idc = -1;
+			text = "Helipad marker";
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			tooltip = "A helipad marker that shows where to land helicopters.";
+			action = "closeDialog 0;nul = [""HP_P""] spawn A3A_fnc_build;";
+		};
+		/*class HQ_button_helipad_object: RscButton // Can't find a suitable object at the moment, commenting out for now
+		{
+			idc = -1;
+			text = "Helipad object";
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			tooltip = "An object you can place on uneven terrain to make it flat. A helipad marker is not included.";
+			action = "closeDialog 0;nul = [""HP_O""] spawn A3A_fnc_build;";
+		};*/
 	};
 };
 class bunker_menu 				{
